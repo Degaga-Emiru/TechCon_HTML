@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCon 2024 Conference Website</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffdd57; /* Hover color */
+            transform: scale(1.1); /* Slight zoom effect */
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            color: #007BFF;
+            font-size: 2em;
+            margin-bottom: 20px;
+            animation: slideInLeft 1s ease-in-out;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Video Styles */
+        video {
+            width: 100%;
+            max-width: 850px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+            margin-left: 50px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+
+            section p {
+                font-size: 1em;
+            }
+
+            video {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <h1>TechCon 2024 Conference Website</h1>   
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <main> 
+        <section>
+            <h2>Introduction to TechCon 2024 Website Event</h2>
+            <p>
+                Join us at TECHON 2024, a premier event celebrating technological advancements, 
+                innovation, and collaboration. Experience insightful talks, interactive workshops, 
+                and networking opportunities with industry leaders shaping the future of technology.
+                <br><br>
+                TECHON 2024 is an exciting technology-focused event that brings together innovators, professionals, 
+                and enthusiasts from around the globe to explore the latest advancements in the tech industry.
+                Scheduled to take place in [insert location or platform], the event will feature interactive workshops,
+                keynote speeches from industry leaders, panel discussions on emerging trends like AI, blockchain, and sustainable technology,
+                and opportunities for networking with top-tier companies and startups. <br><br>
+                Attendees can experience cutting-edge product demonstrations, gain valuable insights into the future of technology, 
+                and connect with like-minded individuals passionate about driving innovation. 
+                Whether you're a seasoned tech professional or a curious beginner, 
+                TECHON 2024 promises to inspire, educate, and empower all who attend.
+            </p>
+            <video controls autoplay muted loop width="1000" height="500">
+                <source src="Techonpromo.mp4" type="video/mp4">
+                <track src="Techonpromo_caption.vtt" kind="captions" srclang="en" label="English">
+                <track src="Techonpromo_caption.vtt" kind="subtitles" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <footer>
+            <p>&copy; 2024 TECHON Event. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+</html>

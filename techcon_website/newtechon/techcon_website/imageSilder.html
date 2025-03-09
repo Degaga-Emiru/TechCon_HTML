@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Image Slider</title>
+ <style>
+    /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Slider Styles */
+.slider {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  height: 400px;
+  margin: 20px auto;
+  overflow: hidden;
+  border: 5px solid #333;
+  border-radius: 10px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+ </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Welcome to My Image Slider</h1>
+  </header>
+
+  <!-- Image Slider Section -->
+  <div class="slider">
+    <img src="John_Cena_2024.jpg" alt="Image 1" class="slide active">
+    <img src="mission.jpg" alt="Image 2" class="slide">
+    <img src="President_Barack_Obama.jpg" alt="Image 3" class="slide">
+    <img src="John_Cena_2024.jpg" alt="Image 4" class="slide">
+    <img src="mission.jpg" alt="Image 5" class="slide">
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2023 My Simple Slider Project</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
+
+function showNextSlide() {
+  // Hide the current slide
+  slides[currentIndex].classList.remove('active');
+
+  // Move to the next slide (loop back to 0 if at the end)
+  currentIndex = (currentIndex + 1) % slides.length;
+
+  // Show the next slide
+  slides[currentIndex].classList.add('active');
+}
+
+// Change slide every 3 seconds
+setInterval(showNextSlide, 3000);
+  </script>
+</body>
+</html>

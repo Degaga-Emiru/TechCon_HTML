@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techon2024 Contact</title>
+    <!-- Google Fonts for Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient background */
+            color: #fff; /* Light text for contrast */
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffdd57; /* Hover color */
+            transform: scale(1.1); /* Slight zoom effect */
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1.5s ease-in-out;
+            color: #333; /* Dark text for contrast */
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h3 {
+            color: #007BFF;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            animation: slideInLeft 1s ease-in-out;
+            text-align: ;
+        }
+
+        section p {
+            font-size: 1.1em;
+        }
+
+        section a {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        section a:hover {
+            color: #0056b3;
+        }
+
+        section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        section ul li {
+            margin: 10px 0;
+        }
+
+        section ul li a {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        section ul li a:hover {
+            color: #0056b3;
+        }
+
+        /* Social Media Icons */
+        .social-media {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-media a:hover {
+            background-color: #0056b3;
+            transform: scale(1.1); /* Slight zoom effect */
+        }
+
+        .social-media .material-icons {
+            font-size: 24px;
+        }
+
+        /* Map Styles */
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Form Styles */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        form input[type="text"]:focus,
+        form input[type="email"]:focus,
+        form textarea:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Glow effect */
+        }
+
+        form textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        form button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            main {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            iframe {
+                height: 300px;
+            }
+
+            .social-media {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <p>Please contact us to get more information about Techon with below social media account.</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="about.html">About</a></li> 
+        </ul>
+    </nav>
+  </header>  
+  <main> 
+    <section> 
+        <p><strong>Email Address</strong></p>
+        <a href="mailto:conference@example.com">conference@example.com</a>
+        <p><strong>Follow Us:</strong></p>
+        <div class="social-media">
+            <a href="https://facebook.com/conference" target="_blank">
+                <span class="material-icons">facebook</span>
+            </a>
+            <a href="https://twitter.com/conference" target="_blank">
+                <span class="material-icons">twitter</span>
+            </a>
+            <a href="https://instagram.com/conference" target="_blank">
+                <span class="material-icons">instagram</span>
+            </a>
+            <a href="https://linkedin.com/company/conference" target="_blank">
+                <span class="material-icons">linkedin</span>
+            </a>
+        </div>
+    </section>
+    <section> 
+        <h3>Our Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5862.502610187633!2d36.81876123423598!3d-1.2833235481040406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11674a69215f%3A0xd63216910c7810a3!2sALX%20Tech%20Hub%20(Kenya)%20-%20Nation%20Centre!5e0!3m2!1sen!2set!4v1734407789237!5m2!1sen!2set" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <section> 
+        <h3>Contact Us</h3>
+        <form> 
+            <label for="name">Name:
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </label>
+            <label for="email">Email:
+                <input type="email" id="email" name="email" placeholder="email@example.com" optional>
+            </label>
+            <label for="message">Message:
+                <textarea id="message" name="message" rows="10" placeholder="Write your message here..." required></textarea>
+            </label>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 TECHON Event. All rights reserved.</p>
+  </footer>
+</body>
+</html>
